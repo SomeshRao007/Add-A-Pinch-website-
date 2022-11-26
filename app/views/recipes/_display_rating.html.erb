@@ -1,0 +1,14 @@
+<div>
+  <% if recipe.reviews.exists? %>	
+
+    <% recipe.avg_rating.times do %>
+      <i class="fas fa-star fa-xs stars"></i>
+    <% end %>
+   
+  <% else %>
+
+    <span class="reviews-count"><%= pluralize(recipe.reviews.count, "review") %></span>
+    
+  <% end %>	
+</div>
+

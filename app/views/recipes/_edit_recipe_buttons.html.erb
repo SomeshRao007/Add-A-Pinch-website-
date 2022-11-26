@@ -1,0 +1,7 @@
+<% if @recipe.user == current_user %>
+  <div class="col">
+    <%= link_to "Add Ingredients", new_recipe_recipe_ingredient_path(@recipe), class: "btn btn-dark" %>
+    <%= link_to "Edit Recipe", edit_recipe_path(@recipe), class: "btn btn-dark" %>
+    <%= link_to "Delete Recipe", recipe_path(@recipe), data: {:confirm => 'Are you sure?'}, class: "btn btn-dark", method: :delete %>
+  </div>
+<% end %>

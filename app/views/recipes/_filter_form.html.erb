@@ -1,0 +1,23 @@
+<%= form_tag("/recipes", method: "get") do %>
+	<div class="row">
+		<div class="col-lg-3">
+				<%= label_tag :user, "Member Name" %>
+				<%= select_tag :user, options_from_collection_for_select(User.all, :id, :name), include_blank: true, class: "form-control" %>
+		</div>
+
+		<div class="col-lg-3">
+				<%= label_tag :ingredient %>
+				<%= select_tag :ingredient, options_from_collection_for_select(Ingredient.all, :id, :name), include_blank: true, class: "form-control" %>
+		</div>
+
+		<div class="col-lg-3">
+				<%= label_tag :title, "Recipe Name" %>
+				<%= text_field_tag :title, nil, class: "form-control" %>
+		</div>
+
+		<div class="col-lg-3 mt-2">
+			<%= submit_tag "Filter", class: "btn btn-dark filter-btn" %>				
+		</div>
+	</div>
+<% end %>
+

@@ -1,0 +1,52 @@
+<div class="container mt-5 form">
+	<%= render partial: 'layouts/errors', locals: {object: @recipe} %>
+
+	<div class="row">
+			<div class="col text-center fs-3 mb-3">
+				<% if @recipe.id %>
+					<h3>Edit Recipe</h3>
+				<% else %>
+					<h3>Add New Recipe</h3>
+				<% end %>
+			</div>
+	</div>
+
+	<%= form_for @recipe do |f| %>
+		<div class="row">
+			<div class="col">
+				<div class="form-group mb-3">
+					<%= f.label :title %>
+					<%= f.text_field :title, class: "form-control" %>
+				</div>
+
+				<div class="form-group mb-3">
+					<%= f.label :cook_time, "Enter Cook Time in minutes" %><br>
+					<%= f.text_field :cook_time %>
+				</div>
+
+				<div class="form-group mb-3">
+					<%= f.label :instructions %>
+					<%= f.text_area :instructions, class: "form-control" %>
+				</div>
+
+				<div class="form-group mb-3">
+					<%= f.label :image, class: "mb-1" %><br>
+					<%= f.file_field :image %>
+				</div>	
+
+				<%= f.submit class: "btn btn-dark" %>
+				</div>
+			</div>
+	<% end %>
+
+	<div class="row">
+		<div class="col">
+			<%= link_to "Back", recipes_path, class: "btn btn-dark" %>
+		</div>
+	</div>
+
+</div>
+
+
+
+

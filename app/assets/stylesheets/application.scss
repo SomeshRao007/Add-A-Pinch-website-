@@ -1,0 +1,57 @@
+
+@import "recipes";
+
+@media screen {
+  /* --- Reset Styles --- */
+  * {
+    list-style: none;
+  }
+
+  body {
+    background-color: white;
+  }
+
+  a {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: blue;
+    background-color: transparent;
+  }
+  
+  a:active {
+    color: darkgray;
+    background-color: transparent;
+  }
+
+  footer {
+    position: fixed;
+    padding-top: 10px;
+    height: 40px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: whitesmoke;
+  }
+
+  .form {
+    border-radius: 5px;
+    padding: 30px 30px 50px;
+    
+  }
+  
+  @media screen and (min-width: 600px) {
+      
+    .form {
+      width: 650px;
+    }
+    
+  }
+  
+
+}
+

@@ -1,0 +1,79 @@
+// Place all the styles related to the Recipes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+@media screen {
+  
+  div.field_with_errors input, div.field_with_errors textarea {
+    border: 1px solid red;
+  }
+
+  #error_explanation, .error {
+    color: red;
+  }
+ 
+  .message {
+    color: green;
+  }
+
+  .home-page-img {
+    border-radius: 10px;
+    max-height: 500px;
+  }
+
+  .edit-ingredient {
+    margin-right: 10px;
+  }
+
+  .recipe-btn:hover {
+    background-color: darkgray
+  }
+
+  .edit-review {
+    margin-top: 10px;
+  }
+
+
+  .btn {
+    margin: 15px 15px 0 0;
+  }
+
+  .recipe-show-image {
+    height: 300px;
+  }
+
+  .recipe-card {
+    
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  &:hover {
+    transform: scale(1.3);
+    }  
+  }
+
+  .image-title {
+    text-align: center;    
+  }
+
+  .instructions, .review-content {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .recipe-title-content {
+    margin: 5px;
+  }
+
+  .reviews-count {
+    margin-left: 5px;
+  }
+
+  .stars {
+    color: gold;
+    opacity: .7;
+  }
+
+}

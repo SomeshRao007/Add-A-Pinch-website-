@@ -1,0 +1,11 @@
+<div class="col-md-4">
+  <h2><%= recipe.title %> </h2>
+    
+  <% if recipe.image.attached? %>    
+   <%= image_tag url_for(recipe.image), class: "img-thumbnail recipe-show-image" %>
+  <% end %>
+  <br>
+  <small class="recipe-title-content mt-1">
+    <b>By:</b> <%= recipe.user.name %> <%= submitted_on recipe %>  
+  </small>				
+</div>

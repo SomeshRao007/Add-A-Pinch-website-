@@ -1,0 +1,15 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col text-center">
+      <h3><%= "Name: " %> <%= @user.name %></h3>
+      
+      <h4><%= "Connect using: "%><%= @user.email %></h4>
+      
+      
+      
+      
+			<p> <%= "Student at Asian Institute Of Technology "%> </p>
+      <%= link_to "Edit Profile", edit_user_path(@user), class: "btn btn-dark" %>
+    </div>
+  </div>
+</div>
