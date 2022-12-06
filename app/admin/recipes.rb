@@ -1,32 +1,32 @@
-ActiveAdmin.register User do
+ActiveAdmin.register Recipe do
 
-	filter :name
+
+	filter :user
+	filter :title
+	filter :cook_time
 	filter :reviews
-	filter :recipes
-	filter :email
-	filter :reviewed_recipes
-	
 	
 	index do 
 		selectable_column
-		
 		column :id
-		column :name
-		column :email
-		column :created_at
-	end
+		column :cook_time
+		column :title
 		
+		column :user
+		column :created_at
+		#action
+	end
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  # permit_params :name, :email, :password_digest
+  # permit_params :title, :cook_time, :instructions, :user_id
   #
   # or
   #
   # permit_params do
-  #   permitted = [:name, :email, :password_digest]
+  #   permitted = [:title, :cook_time, :instructions, :user_id]
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end

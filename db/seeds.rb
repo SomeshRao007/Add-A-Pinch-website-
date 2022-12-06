@@ -22,3 +22,4 @@ end
 
 create_ingredients(ingredients)
 
+AdminUser.create!(email: 'tangent1221@gmail.com', password: '12345678790', password_confirmation: '12345678790') if Rails.env.development?

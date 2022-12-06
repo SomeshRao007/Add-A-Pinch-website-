@@ -5,6 +5,7 @@ class User < ApplicationRecord
 
 	validates :name, presence: true, length: { minimum: 2 }
 	validates :email, presence: true, uniqueness: true
+	
 	has_secure_password
 
 	def self.by_omniauth(auth)
