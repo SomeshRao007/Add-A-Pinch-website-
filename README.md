@@ -26,4 +26,4 @@ create an account or login using
 
 /users/1 : User profile
 
-/recipe/admin/ : Administrator Features
+/admin/ : Administrator Features
